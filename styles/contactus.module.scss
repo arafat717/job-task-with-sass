@@ -1,0 +1,27 @@
+.contact {
+  background-color: #fff8f3;
+  text-align: center;
+  padding: 100px;
+  h1 {
+    color: #252b42;
+  }
+  h4 {
+    color: #96bb7c;
+  }
+  .field {
+    input {
+      width: 500px;
+      height: 30px;
+    }
+    button {
+      gap: 4px;
+      padding: 10px 25px 10px 25px;
+      color: white;
+      background-color: #96ba7b;
+      border-radius: 0px, 5px, 5px, 0px;
+      transition: 0.5s;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

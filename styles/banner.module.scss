@@ -1,0 +1,84 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40px;
+  align-items: center;
+  text-decoration: none;
+  nav ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      text-decoration: none;
+      margin: 0 8px;
+      a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: 0.5s;
+      }
+      a:hover {
+        color: white;
+        background: gray;
+      }
+    }
+  }
+  button {
+    padding: 15px 25px 15px 25px;
+    color: white;
+    background-color: #96ba7b;
+    border-radius: 4px;
+    transition: 0.5s;
+    cursor: pointer;
+    border: none;
+  }
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 80px;
+  div h2 {
+    color: #96bb7c;
+    font-size: 24px;
+  }
+  div h1 {
+    color: black;
+    font-size: 50px;
+  }
+  div p {
+    color: gray;
+  }
+  .btnfilled {
+    gap: 4px;
+    padding: 15px 25px 15px 25px;
+    color: white;
+    background-color: #96ba7b;
+    border-radius: 4px;
+    transition: 0.5s;
+    cursor: pointer;
+    border: none;
+  }
+  .btnoutline {
+    color: #96bb7c;
+    border: 1px solid #96bb7c;
+    gap: 10px;
+    padding: 15px 40px 15px 40px;
+    border-radius: 4px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+
+.btnoutline {
+  color: #96bb7c;
+  border: 1px solid #96bb7c;
+  gap: 10px;
+  padding: 15px 40px 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  cursor: pointer;
+}

@@ -1,0 +1,55 @@
+.package {
+  display: flex;
+  margin: auto;
+  padding: 150px 150px;
+  gap: 40px;
+  hr {
+    text-align: right;
+    width: 94px;
+    height: 7px;
+    background-color: #e74040;
+  }
+  h2 {
+    color: #252b42;
+    font-size: 40px;
+  }
+  p {
+    font-size: 14px;
+    color: #737373;
+  }
+  button {
+    color: #96bb7c;
+    border: none;
+    background-color: white;
+    padding: 15px 40px 15px 0;
+    border-radius: 4px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .card {
+    display: flex;
+    gap: 10px;
+    .card1 {
+      width: 250px;
+      height: 292px;
+      background: rgb(248, 243, 243);
+      .icard {
+        .hr {
+          margin-left: -100px;
+        }
+        padding: 40px;
+        div {
+          image {
+            padding: 6px;
+          }
+        }
+        h4 {
+          color: #252b42;
+        }
+        p {
+          color: #737373;
+        }
+      }
+    }
+  }
+}

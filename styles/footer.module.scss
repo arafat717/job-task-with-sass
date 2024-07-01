@@ -1,0 +1,25 @@
+.footer {
+  div {
+    ul {
+      p {
+        color: #252b42;
+        font-size: 16px;
+      }
+      list-style-type: none;
+      li {
+        text-decoration: none;
+        margin: 10px;
+        a {
+          text-decoration: none;
+          color: #737373;
+        }
+      }
+    }
+  }
+  .lowerfooter {
+    display: flex;
+    background-color: #fafafa;
+    justify-content: space-between;
+    padding: 15px 150px;
+  }
+}
