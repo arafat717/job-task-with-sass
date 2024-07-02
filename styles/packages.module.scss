@@ -35,10 +35,15 @@
       background: rgb(248, 243, 243);
       .icard {
         .hr {
+          display: inline;
           margin-left: -100px;
         }
         padding: 40px;
         div {
+          display: inline;
+          background-color: #96bb7c;
+          padding: 30px 10px 10px 10px;
+          border-radius: 5px;
           image {
             padding: 6px;
           }

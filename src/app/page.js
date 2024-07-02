@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Banner></Banner>
-      <ApprodablePackages></ApprodablePackages>
+      <ApprodablePackages></ApprodablePackages>f
       <ContactUs></ContactUs>
       <Footer></Footer>
     </>

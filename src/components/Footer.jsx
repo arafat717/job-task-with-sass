@@ -116,7 +116,7 @@ const Footer = () => {
       </div>
       <div className={styles.lowerfooter}>
         <div>
-          <div>Made With Love By Figmaland All Right Reserved</div>
+          <h>Made With Love By Figmaland All Right Reserved</h>
         </div>
         <div>
           <a href="https://facebook.com" rel="noopener noreferrer">
