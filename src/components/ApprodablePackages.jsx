@@ -7,8 +7,8 @@ import { FaArrowRight } from "react-icons/fa";
 const ApprodablePackages = () => {
   return (
     <div className={styles.package}>
-      <div>
-        <hr />
+      <div style={{ height: "246px", width: "507px" }}>
+        <hr className={styles.banhr} />
         <h2>Approdable Packages</h2>
         <p>
           Problems trying to resolve the conflict <br /> between the two major
@@ -36,9 +36,9 @@ const ApprodablePackages = () => {
         <div className={styles.card1}>
           <div className={styles.icard}>
             <div>
-              <Image src={icon1} width={32} height={32} alt="icon1"></Image>
+              <Image src={icon2} width={32} height={32} alt="icon1"></Image>
             </div>
-            <h4>Certified Teacher</h4>
+            <h4>Expert instruction</h4>
             <hr />
             <p>The gradual accumulation of information about </p>
           </div>

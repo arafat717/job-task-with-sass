@@ -1,27 +1,47 @@
+@use "./base/index";
+@import "./base/buttom";
+
 .contact {
-  background-color: #fff8f3;
+  background-color: index.$primary-bg;
   text-align: center;
   padding: 100px;
-  h1 {
-    color: #252b42;
+  h2 {
+    color: index.$heading-color;
+    margin: 10px 0;
   }
   h4 {
-    color: #96bb7c;
+    color: index.$primary-color;
   }
   .field {
-    input {
-      width: 500px;
-      height: 30px;
+    margin-top: 50px;
+    form {
+      input {
+        width: 500px;
+        height: 40px;
+        font-size: 16px;
+      }
     }
     button {
-      gap: 4px;
-      padding: 10px 25px 10px 25px;
-      color: white;
-      background-color: #96ba7b;
-      border-radius: 0px, 5px, 5px, 0px;
-      transition: 0.5s;
-      border: none;
-      cursor: pointer;
+      @include button-filled(index.$primary-color);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    .field {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      form {
+        input {
+          margin-bottom: 5px;
+          text-align: center;
+          width: 300px;
+          height: 20px;
+          font-size: 6px;
+        }
+      }
     }
   }
 }

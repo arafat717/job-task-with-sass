@@ -1,84 +1,94 @@
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 40px;
-  align-items: center;
-  text-decoration: none;
-  nav ul {
-    list-style-type: none;
-    li {
-      display: inline-block;
-      text-decoration: none;
-      margin: 0 8px;
-      a {
-        text-decoration: none;
-        color: black;
-        padding: 10px 15px;
-        border-radius: 5px;
-        transition: 0.5s;
-      }
-      a:hover {
-        color: white;
-        background: gray;
-      }
-    }
-  }
-  button {
-    padding: 15px 25px 15px 25px;
-    color: white;
-    background-color: #96ba7b;
-    border-radius: 4px;
-    transition: 0.5s;
-    cursor: pointer;
-    border: none;
-  }
-}
+@use "./base/index";
+@import "./base/buttom";
 
 .banner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
-  padding: 0 80px;
-  div h2 {
-    color: #96bb7c;
-    font-size: 24px;
-  }
-  div h1 {
-    color: black;
-    font-size: 50px;
-  }
-  div p {
-    color: gray;
-  }
-  .btnfilled {
-    gap: 4px;
-    padding: 15px 25px 15px 25px;
-    color: white;
-    background-color: #96ba7b;
-    border-radius: 4px;
-    transition: 0.5s;
-    cursor: pointer;
-    border: none;
-  }
-  .btnoutline {
-    color: #96bb7c;
-    border: 1px solid #96bb7c;
-    gap: 10px;
-    padding: 15px 40px 15px 40px;
-    border-radius: 4px;
-    transition: 0.5s;
-    cursor: pointer;
-  }
-}
+  padding: 0 0 0 150px;
 
-.btnoutline {
-  color: #96bb7c;
-  border: 1px solid #96bb7c;
-  gap: 10px;
-  padding: 15px 40px 15px 40px;
-  border-radius: 4px;
-  transition: 0.5s;
-  cursor: pointer;
+  div h4 {
+    color: index.$primary-color;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  div h1 {
+    color: index.$heading-color;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  div p {
+    color: index.$pera-color;
+    margin-bottom: 20px;
+  }
+
+  .btnfilled {
+    @include button-filled(index.$primary-color);
+  }
+
+  .btnoutline {
+    @include button-outlined(index.$primary-color);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+
+    div {
+      text-align: center;
+
+      h1 {
+        font-size: 36px;
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+    }
+
+    .btnfilled,
+    .btnoutline {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    div {
+      .img {
+        width: 700px;
+        height: 680px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .banner {
+      div {
+        h4 {
+          font-size: 20px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+      .btnfilled,
+      .btnoutline {
+        font-size: 14px;
+      }
+    }
+    div {
+      .img {
+        width: 350px;
+        height: 300px;
+      }
+    }
+  }
 }

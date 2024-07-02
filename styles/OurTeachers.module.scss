@@ -1,0 +1,85 @@
+@use "./base/index";
+
+.team {
+  padding: 100px 195px;
+  .dev1 {
+    h4 {
+      color: index.$primary-color;
+      font-size: 14px;
+    }
+    h1 {
+      color: index.$heading-color;
+      font-size: 24px;
+      margin: 20px 0;
+    }
+    p {
+      color: index.$pera-color;
+      font-size: 14px;
+    }
+    margin-bottom: 50px;
+  }
+  .dev2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    .card {
+      div {
+        .img {
+          width: 241px;
+          height: 231px;
+        }
+      }
+      border-radius: 12px;
+      width: 241px;
+      height: 375px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      .cardbody {
+        text-align: center;
+        margin-top: 10px;
+        h2 {
+          color: #252b42;
+          font-size: 16px;
+          margin-top: 20px;
+        }
+        p {
+          color: #737373;
+          font-size: 12px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+        }
+        .social {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 8px;
+          border-radius: 5px;
+          transition: 0.3s;
+          gap: 30px;
+          .icon {
+            color: #96bb7c;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .team {
+    padding: 40px 30px;
+    .dev2 {
+      grid-template-columns: 1fr;
+      .card {
+        width: 100%;
+        div {
+          .img {
+            width: 305px;
+            height: 231px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,30 +1,31 @@
+@use "./base/index";
+@import "./base/buttom";
+
 .package {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
-  padding: 150px 150px;
-  gap: 40px;
-  hr {
-    text-align: right;
-    width: 94px;
-    height: 7px;
-    background-color: #e74040;
+  padding: 150px 200px;
+  gap: 50px;
+  .banhr {
+    width: 76px;
+    display: inline-block;
+    height: 5px;
+    background-color: index.$hr-color;
   }
   h2 {
-    color: #252b42;
+    color: index.$heading-color;
     font-size: 40px;
+    margin: 30px 0;
   }
   p {
     font-size: 14px;
-    color: #737373;
+    color: index.$pera-color;
+    margin-bottom: 20px;
   }
   button {
-    color: #96bb7c;
-    border: none;
-    background-color: white;
-    padding: 15px 40px 15px 0;
-    border-radius: 4px;
-    transition: 0.5s;
-    cursor: pointer;
+    @include button-wobr(index.$primary-color);
   }
   .card {
     display: flex;
@@ -32,29 +33,65 @@
     .card1 {
       width: 250px;
       height: 292px;
-      background: rgb(248, 243, 243);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
       .icard {
-        .hr {
-          display: inline;
-          margin-left: -100px;
-        }
         padding: 40px;
         div {
           display: inline;
-          background-color: #96bb7c;
+          background-color: index.$primary-color;
           padding: 30px 10px 10px 10px;
           border-radius: 5px;
           image {
             padding: 6px;
           }
         }
+        hr {
+          width: 76px;
+          display: inline-block;
+          height: 5px;
+          background-color: index.$hr-color;
+        }
         h4 {
-          color: #252b42;
+          color: index.$heading-color;
+          margin-top: 40px;
+          margin-bottom: 20px;
         }
         p {
-          color: #737373;
+          margin-top: 20px;
+          color: index.$pera-color;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .package {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 10px;
+    h2 {
+      color: index.$heading-color;
+      font-size: 20px;
+      margin: 15px 0;
+      text-align: center;
+    }
+    .banhr {
+      visibility: hidden;
+    }
+    p {
+      font-size: 10px;
+      color: index.$pera-color;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    button {
+      visibility: hidden;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
